@@ -25,7 +25,8 @@
                 android:layout_width="@dimen/image_w"
                 android:layout_height="@dimen/image_h"
                 android:scaleType="centerCrop"
-                tools:ignore="ContentDescription" />
+                android:background="@drawable/radius_image"
+                tools:ignore="ContentDescription,NotSibling" />
 
             <RelativeLayout
                 android:layout_width="@dimen/relative_w"
