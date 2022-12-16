@@ -1,11 +1,10 @@
-package com.example.youtube.base
+package com.example.youtube.core.network.ui
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewbinding.ViewBinding
 
-abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
+ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
     protected lateinit var binding: VB
     protected abstract fun inflateViewBinding(): VB
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,15 +17,18 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
         initAdapter()
         setupLiveData()
         initListener()
+
     }
 
-    open fun setupLiveData(){}
+   open fun setupLiveData(){}
 
     open fun setUI(){}
 
     open fun  initAdapter(){}
 
-    open fun checkInternet(){}
+   open fun checkInternet(){}
 
-    open fun initListener(){}
+   open fun initListener(){}
+
+
 }
